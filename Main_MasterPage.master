@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main_MasterPage.master.cs" Inherits="Main_Master_Login_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../Style/Style.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper" style:"center">
+        <div class="content">
+            <table>
+                <tr>
+                    <td colspan="2" class="center">
+                        <asp:Image ID="Image1" ImageUrl="~/Main/Images/메인화면.png" runat="server"/>
+                        <br />
+                        <asp:ImageButton ID="CreateAccountButton" ImageUrl="~/Main/Images/계정생성_이미지버튼.png" runat="server" OnClick="CreateAccountButton_Click" />
+                        <asp:ImageButton ID="LoginAccountButton" ImageUrl="~/Main/Images/계정로그인_이미지버튼.png" runat="server" OnClick="LoginAccountButton_Click" />
+                        <asp:ImageButton ID="SearchAccountButton" ImageUrl="~/Main/Images/계정찾기_이미지버튼.png" runat="server" OnClick="SearchAccountButton_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="MasterPage" runat="server">
+                            마스터 페이지
+	                    </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

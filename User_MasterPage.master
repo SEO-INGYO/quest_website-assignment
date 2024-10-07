@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User_MasterPage.master.cs" Inherits="Main_Master_User_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../Style/Style.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <div class="content">
+            <table>
+                <tr class="right">
+                    <td class="left">
+                        방문자 : <asp:Label ID="lblCounter0" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                        접속자 : <asp:Label ID="lblCounter1" runat="server" Text=""></asp:Label>&nbsp;&nbsp;
+                        [&nbsp;<asp:Label ID="UserID" runat="server" Text=""></asp:Label>&nbsp;] 님 어서오세요 <asp:Button ID="Logout" runat="server" Text="로그아웃" OnClick="Logout_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">
+                        <asp:ImageButton ID="MyPage" runat="server" ImageUrl="~/Main/Images/마이페이지_이미지버튼.png" OnClick="MyPage_Click"/>
+                        <asp:ImageButton ID="Quest" runat="server" ImageUrl="~/Main/Images/퀘스트_이미지버튼.png" OnClick="Quest_Click" />
+                        <asp:ImageButton ID="Ranking" runat="server" ImageUrl="~/Main/Images/랭킹_이미지버튼.png" OnClick="Ranking_Click"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder id="MasterPage" runat="server">
+                            마스터페이지
+	                    </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

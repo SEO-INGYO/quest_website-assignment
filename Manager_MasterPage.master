@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Manager_MasterPage.master.cs" Inherits="Main_Master_Manager_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../Style/Style.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="wrapper">
+        <table>
+            <tr>
+                <td>
+                   [<asp:Label ID="ManagerID" runat="server" Text=""></asp:Label>]&nbsp;로 접속 중입니다.&nbsp;&nbsp;<asp:Button ID="Logout" runat="server" Text="로그아웃" OnClick="Logout_Click" />
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <asp:ImageButton ID="ManagerPage" runat="server" ImageUrl="~/Main/Images/관리자페이지_이미지버튼.png" OnClick="ManagerPage_Click"/>
+                    <asp:ImageButton ID="UserManager" runat="server" ImageUrl="~/Main/Images/사용자관리_이미지버튼.png" OnClick="UserManager_Click"/>
+                    <asp:ImageButton ID="QuestManager" runat="server" ImageUrl="~/Main/Images/퀘스트관리_이미지버튼.png" OnClick="QuestManager_Click"/>
+                    
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder id="MasterPage" runat="server">
+                        마스터페이지</asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
